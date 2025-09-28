@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SirSnuggles | Hub</title>
+    <style>
+        body {
+            /* Gebruik de achtergrondkleuren van je screenshot */
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: #1a1a1a; /* Donkere tekstkleur */
+        }
+
+        .hub-container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 600px; /* Max breedte van de centrale kaart */
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-pic-header {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            /* Lichte schaduw om het profielfoto-effect te verbeteren */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Twee kolommen van gelijke breedte */
+            gap: 20px; /* Ruimte tussen de kaarten */
+        }
+
+        .site-card {
+            background-color: #f7f7f7; /* Een lichte achtergrond voor de kaarten */
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Zachte schaduw op de kaart */
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 150px; /* Vaste hoogte voor de kaarten */
+        }
+
+        /* Effect bij hoveren */
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-pic-card {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1em;
+            font-weight: 500;
+            margin: 5px 0 15px 0;
+            text-align: center;
+        }
+
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            /* De blauw/paarse gradient uit de afbeelding */
+            background: linear-gradient(to right, #00c6ff, #0072ff); 
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: opacity 0.2s;
+        }
+
+        .go-to-button:hover {
+            opacity: 0.9;
+        }
+
+        /* Specifiek voor de lege kaart */
+        .empty-card {
+            background-color: white; /* Wit of heel licht grijs, zoals in het voorbeeld */
+            border: 2px dashed #ddd; /* Optioneel: een gestippelde rand voor lege plekken */
+            box-shadow: none; /* Geen schaduw of een hele lichte */
+        }
+
+        /* Media query voor kleinere schermen (bv. mobiel) */
+        @media (max-width: 500px) {
+            .card-grid {
+                grid-template-columns: 1fr; /* Op mobiel de kaarten onder elkaar */
+            }
+            .hub-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hub-container">
+    <header class="header">
+        <img src="kat.jpg" alt="SirSnuggles Profielfoto" class="profile-pic-header">
+        <h1>SirSnuggles | Hub</h1>
+    </header>
+
+    <div class="card-grid">
+        <div class="site-card">
+            <img src="kat.jpg" alt="SirSnuggles Home Profielfoto" class="profile-pic-card">
+            <span class="card-title">SirSnuggles Home</span>
+            <a href="https://jouwdomein.nl/home" class="go-to-button">Go to site</a>
+        </div>
+
+        <div class="site-card empty-card">
+            <span class="card-title" style="color: #888;">Nieuwe site hier</span>
+            </div>
+
+        </div>
+</div>
+
+</body>
+</html>
