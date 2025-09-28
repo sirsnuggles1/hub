@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SirSnuggles | Hub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            /* Gebruik de achtergrondkleuren van je screenshot */
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            /* De blauw-paarse gradiënt zoals in je screenshot */
+            /* Ik heb de heldere blauwe gekozen die we net hebben besproken */
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            /* Het nieuwe lettertype is hier toegepast */
+            font-family: 'Comfortaa', sans-serif; 
             margin: 0;
             color: #1a1a1a; /* Donkere tekstkleur */
         }
@@ -41,7 +49,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
-            /* Lichte schaduw om het profielfoto-effect te verbeteren */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -112,15 +119,15 @@
 
         /* Specifiek voor de lege kaart */
         .empty-card {
-            background-color: white; /* Wit of heel licht grijs, zoals in het voorbeeld */
-            border: 2px dashed #ddd; /* Optioneel: een gestippelde rand voor lege plekken */
-            box-shadow: none; /* Geen schaduw of een hele lichte */
+            background-color: white; 
+            border: 2px dashed #ddd; 
+            box-shadow: none; 
         }
 
         /* Media query voor kleinere schermen (bv. mobiel) */
         @media (max-width: 500px) {
             .card-grid {
-                grid-template-columns: 1fr; /* Op mobiel de kaarten onder elkaar */
+                grid-template-columns: 1fr; 
             }
             .hub-container {
                 padding: 20px;
@@ -145,7 +152,7 @@
 
         <div class="site-card empty-card">
             <span class="card-title" style="color: #888;">Nieuwe site hier</span>
-            </div>
+        </div>
 
         </div>
 </div>
